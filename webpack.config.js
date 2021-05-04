@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     entry: path.join(__dirname, "src", "index.js"),
     output: {
-        path: path.join(__dirname, "build"),
+        path: path.join(__dirname, "public"),
         filename: "bundle.js",
     },
     devtool: 'source-map',
@@ -23,6 +23,11 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
         ],
+    },
+    devServer: {
+        contentBase:path.join(__dirname,'public'),
+        compress:true,
+        port:9000
     },
     plugins: [
         new HtmlWebpackPlugin({
