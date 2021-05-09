@@ -8,16 +8,18 @@ import Message from './message';
     const  handleClick =()=>{
         setState ([...state,'Нормально'])
     };
-    render(){
-        const  messageElement = setState.map((text,index)=>{
-         <Message key ={index} text ={text}/>
-        });
+    console.log(state);
+     const  messageElement = state.map((text,index)=>{
+         return <Message key ={index} text ={text}/>
+
+     });
         return(
+
             <div>
                 {messageElement}
                 <button onClick={handleClick}>отправить сообщение</button>
             </div>
         )
     }
-};
+
 export default MessageField;

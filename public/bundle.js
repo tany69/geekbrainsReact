@@ -1,6 +1,15 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/components/messages/messageField.js":
+/*!*************************************************!*\
+  !*** ./src/components/messages/messageField.js ***!
+  \*************************************************/
+/***/ (() => {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\src\\components\\messages\\messageField.js: Unexpected token (21:0)\n\n\u001b[0m \u001b[90m 19 |\u001b[39m         )\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m     }\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m }\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m \u001b[33mMessageField\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n    at Object._raise (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:776:17)\n    at Object.raiseWithData (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:769:17)\n    at Object.raise (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:737:17)\n    at Object.unexpected (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:9736:16)\n    at Object.parseExprAtom (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:11132:20)\n    at Object.parseExprAtom (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:5170:20)\n    at Object.parseExprSubscripts (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10709:23)\n    at Object.parseUpdate (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10689:21)\n    at Object.parseMaybeUnary (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10667:23)\n    at Object.parseExprOps (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10524:23)\n    at Object.parseMaybeConditional (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10498:23)\n    at Object.parseMaybeAssign (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10461:21)\n    at Object.parseExpressionBase (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10406:23)\n    at E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10400:39\n    at Object.allowInAnd (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:12099:16)\n    at Object.parseExpression (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10400:17)\n    at Object.parseStatementContent (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:12391:23)\n    at Object.parseStatement (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:12260:17)\n    at Object.parseBlockOrModuleBlockBody (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:12846:25)\n    at Object.parseBlockBody (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:12837:10)\n    at Object.parseProgram (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:12191:10)\n    at Object.parseTopLevel (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:12182:25)\n    at Object.parse (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:13893:10)\n    at parse (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:13945:38)\n    at parser (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\core\\lib\\parser\\index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:55:38)\n    at normalizeFile.next (<anonymous>)\n    at run (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\core\\lib\\transformation\\index.js:31:50)\n    at run.next (<anonymous>)");
+
+/***/ }),
 
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
@@ -8,6 +17,7 @@
   \*********************************************/
 /***/ ((module) => {
 
+"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -108,6 +118,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 /** @license React v17.0.2
  * react-dom.development.js
  *
@@ -26375,6 +26386,7 @@ exports.version = ReactVersion;
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 function checkDCE() {
@@ -26418,6 +26430,7 @@ if (false) {} else {
   \*****************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 /** @license React v17.0.2
  * react.development.js
  *
@@ -28761,6 +28774,7 @@ exports.version = ReactVersion;
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 if (false) {} else {
@@ -28776,6 +28790,7 @@ if (false) {} else {
   \*********************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 /** @license React v0.20.2
  * scheduler-tracing.development.js
  *
@@ -29133,6 +29148,7 @@ exports.unstable_wrap = unstable_wrap;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 /** @license React v0.20.2
  * scheduler.development.js
  *
@@ -29789,6 +29805,7 @@ exports.unstable_wrapCallback = unstable_wrapCallback;
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 if (false) {} else {
@@ -29804,6 +29821,7 @@ if (false) {} else {
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 if (false) {} else {
@@ -29840,6 +29858,35 @@ if (false) {} else {
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -29853,23 +29900,25 @@ if (false) {} else {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/messages/messageField'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _components_messages_messageField__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/messages/messageField */ "./src/components/messages/messageField.js");
+/* harmony import */ var _components_messages_messageField__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_messages_messageField__WEBPACK_IMPORTED_MODULE_2__);
 
 
  // const mess = 'Hello world!';
-//�������������� ���������
+//функциональный компонент
 //LESSON 1
 // const Obj = ({str}) => {
 //      const messtoadd = 'YesNo.';
-//      const [value,setValue]= useState(messtoadd); // ��������� ��������� ��������  � ���������� �������� �  ������ ����� ����������������
+//      const [value,setValue]= useState(messtoadd); // принимает начальное значение  и записывает значения в  массив через деструктуризацию
 //      const addPlusToString =() =>{
 //            return  value;
 //      };
@@ -29889,7 +29938,7 @@ Object(function webpackMissingModule() { var e = new Error("Cannot find module '
 // };
 //ReactDOM.render(<Obj  str="  April 2021!  " />, document.getElementById("app"));
 
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/messages/messageField'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), null), document.getElementById("app"));
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement((_components_messages_messageField__WEBPACK_IMPORTED_MODULE_2___default()), null), document.getElementById("app"));
 })();
 
 /******/ })()

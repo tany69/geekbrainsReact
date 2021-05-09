@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import MessageField from './components/messages/messageField';
+import Mess from './components/messages/messageField';
 
 // const mess = 'Hello world!';
 
@@ -29,4 +29,4 @@ import MessageField from './components/messages/messageField';
 //ReactDOM.render(<Obj  str="  April 2021!  " />, document.getElementById("app"));
 
 
-ReactDOM.render(<MessageField/>, document.getElementById("app"));
+ReactDOM.render(<Mess/>, document.getElementById("app"));
