@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import MessageField from './components/messages/';
+import MessageField from './components/messages/messageField';
 
 // const mess = 'Hello world!';
 
-//ôóíêöèîíàëüíûé êîìïîíåíò
+//Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¾Ð½Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚
 //LESSON 1
 // const Obj = ({str}) => {
 //      const messtoadd = 'YesNo.';
-//      const [value,setValue]= useState(messtoadd); // ïðèíèìàåò íà÷àëüíîå çíà÷åíèå  è çàïèñûâàåò çíà÷åíèÿ â  ìàññèâ ÷åðåç äåñòðóêòóðèçàöèþ
+//      const [value,setValue]= useState(messtoadd); // Ð¿Ñ€Ð¸Ð½Ð¸Ð¼Ð°ÐµÑ‚ Ð½Ð°Ñ‡Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ  Ð¸ Ð·Ð°Ð¿Ð¸ÑÑ‹Ð²Ð°ÐµÑ‚ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ Ð²  Ð¼Ð°ÑÑÐ¸Ð² Ñ‡ÐµÑ€ÐµÐ· Ð´ÐµÑÑ‚Ñ€ÑƒÐºÑ‚ÑƒÑ€Ð¸Ð·Ð°Ñ†Ð¸ÑŽ
 //      const addPlusToString =() =>{
 //            return  value;
 //      };
@@ -29,4 +29,4 @@ import MessageField from './components/messages/';
 //ReactDOM.render(<Obj  str="  April 2021!  " />, document.getElementById("app"));
 
 
-ReactDOM.render(<Mess />, document.getElementById("app"));
+ReactDOM.render(<MessageField/>, document.getElementById("app"));

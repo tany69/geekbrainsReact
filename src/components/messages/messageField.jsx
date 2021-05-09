@@ -1,12 +1,12 @@
 import React,{useState} from 'react';
 import Message from './message';
 
-const MessageField =()=>{
-    const mess_arr =["Привет!","Как дела?"];
+ const MessageField =()=>{
+    const mess_arr =["РџСЂРёРІРµС‚!","РљР°Рє РґРµР»Р°?"];
     const [state,setState] = useState(mess_arr);
 
     const  handleClick =()=>{
-        setState ([...state,'Нормально'])
+        setState ([...state,'РќРѕСЂРјР°Р»СЊРЅРѕ'])
     };
     render(){
         const  messageElement = setState.map((text,index)=>{
@@ -15,7 +15,7 @@ const MessageField =()=>{
         return(
             <div>
                 {messageElement}
-                <button onClick={handleClick}>отправить сообщение</button>
+                <button onClick={handleClick}>РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ</button>
             </div>
         )
     }
