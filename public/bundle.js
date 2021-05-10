@@ -1,13 +1,140 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/components/messages/message.js":
+/*!********************************************!*\
+  !*** ./src/components/messages/message.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+var Message = function Message(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, props.text);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Message);
+
+/***/ }),
 
 /***/ "./src/components/messages/messageField.js":
 /*!*************************************************!*\
   !*** ./src/components/messages/messageField.js ***!
   \*************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\src\\components\\messages\\messageField.js: Unexpected token (21:0)\n\n\u001b[0m \u001b[90m 19 |\u001b[39m         )\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m     }\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m }\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m \u001b[33mMessageField\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n    at Object._raise (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:776:17)\n    at Object.raiseWithData (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:769:17)\n    at Object.raise (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:737:17)\n    at Object.unexpected (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:9736:16)\n    at Object.parseExprAtom (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:11132:20)\n    at Object.parseExprAtom (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:5170:20)\n    at Object.parseExprSubscripts (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10709:23)\n    at Object.parseUpdate (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10689:21)\n    at Object.parseMaybeUnary (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10667:23)\n    at Object.parseExprOps (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10524:23)\n    at Object.parseMaybeConditional (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10498:23)\n    at Object.parseMaybeAssign (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10461:21)\n    at Object.parseExpressionBase (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10406:23)\n    at E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10400:39\n    at Object.allowInAnd (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:12099:16)\n    at Object.parseExpression (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:10400:17)\n    at Object.parseStatementContent (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:12391:23)\n    at Object.parseStatement (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:12260:17)\n    at Object.parseBlockOrModuleBlockBody (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:12846:25)\n    at Object.parseBlockBody (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:12837:10)\n    at Object.parseProgram (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:12191:10)\n    at Object.parseTopLevel (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:12182:25)\n    at Object.parse (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:13893:10)\n    at parse (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\parser\\lib\\index.js:13945:38)\n    at parser (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\core\\lib\\parser\\index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:55:38)\n    at normalizeFile.next (<anonymous>)\n    at run (E:\\Users\\Муза\\Documents\\React\\geekbrainsReact\\node_modules\\@babel\\core\\lib\\transformation\\index.js:31:50)\n    at run.next (<anonymous>)");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./message */ "./src/components/messages/message.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+var MessageField = function MessageField() {
+  var AUTHORS = {
+    USER: 'USER',
+    BOT: 'Bot'
+  };
+  var initMessages = [{
+    autor: AUTHORS.BOT,
+    text: 'Привет,USER!'
+  }, {
+    autor: AUTHORS.USER,
+    text: 'Привет)'
+  }];
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      value = _useState2[0],
+      setValue = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(initMessages),
+      _useState4 = _slicedToArray(_useState3, 2),
+      messages = _useState4[0],
+      setMessages = _useState4[1];
+
+  var handleClick = function handleClick(e) {
+    e.preventDefault();
+    onAddMessage({
+      author: AUTHORS.USER,
+      text: value
+    });
+    setValue('');
+  };
+
+  var handleChange = function handleChange(e) {
+    setValue(e.target.value);
+  };
+
+  var handleAddMessage = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (newMessage) {
+    setMessages(function (prevMessages) {
+      return [].concat(_toConsumableArray(prevMessages), [newMessage]);
+    });
+  }, []);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (!messages.length) {
+      return;
+    }
+
+    var lastMsg = messages[messages.length - 1];
+
+    if (lastMsg.author === AUTHORS.USER) {
+      handleAddMessage({
+        author: AUTHORS.BOT,
+        text: "Hi,".concat(lastMsg.author)
+      });
+    }
+  }, [messages]);
+  var messageRender = messages.map(function (message, index) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+      key: index
+    }, message.author, ": ", message.text);
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ChatField, {
+    messages: messages
+  }), messageRender, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(MessageField, {
+    onAddMessage: handleAddMessage
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "text",
+    name: "usertext",
+    size: "20",
+    id: "usertext",
+    value: value,
+    onChange: handleChange
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    onClick: handleClick
+  }, "\u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435"));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MessageField);
 
 /***/ }),
 
@@ -17,7 +144,6 @@ throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index
   \*********************************************/
 /***/ ((module) => {
 
-"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -118,7 +244,6 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 /** @license React v17.0.2
  * react-dom.development.js
  *
@@ -26386,7 +26511,6 @@ exports.version = ReactVersion;
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 function checkDCE() {
@@ -26430,7 +26554,6 @@ if (false) {} else {
   \*****************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 /** @license React v17.0.2
  * react.development.js
  *
@@ -28774,7 +28897,6 @@ exports.version = ReactVersion;
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 if (false) {} else {
@@ -28790,7 +28912,6 @@ if (false) {} else {
   \*********************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 /** @license React v0.20.2
  * scheduler-tracing.development.js
  *
@@ -29148,7 +29269,6 @@ exports.unstable_wrap = unstable_wrap;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 /** @license React v0.20.2
  * scheduler.development.js
  *
@@ -29805,7 +29925,6 @@ exports.unstable_wrapCallback = unstable_wrapCallback;
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 if (false) {} else {
@@ -29821,7 +29940,6 @@ if (false) {} else {
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 if (false) {} else {
@@ -29858,18 +29976,6 @@ if (false) {} else {
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -29900,9 +30006,8 @@ if (false) {} else {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
@@ -29910,7 +30015,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _components_messages_messageField__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/messages/messageField */ "./src/components/messages/messageField.js");
-/* harmony import */ var _components_messages_messageField__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_messages_messageField__WEBPACK_IMPORTED_MODULE_2__);
 
 
  // const mess = 'Hello world!';
@@ -29938,7 +30042,7 @@ __webpack_require__.r(__webpack_exports__);
 // };
 //ReactDOM.render(<Obj  str="  April 2021!  " />, document.getElementById("app"));
 
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement((_components_messages_messageField__WEBPACK_IMPORTED_MODULE_2___default()), null), document.getElementById("app"));
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_messages_messageField__WEBPACK_IMPORTED_MODULE_2__.default, null), document.getElementById("app"));
 })();
 
 /******/ })()
