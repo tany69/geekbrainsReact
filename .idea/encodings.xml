@@ -3,8 +3,10 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/package.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/components/app/app.jsx" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/components/messages/message.jsx" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/components/messages/messageField.jsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/messages/ChatField.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/messages/authors.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/messages/message.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/messages/messageForm.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/index.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/webpack.config.js" charset="UTF-8" />
   </component>

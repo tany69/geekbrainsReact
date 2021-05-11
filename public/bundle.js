@@ -118,9 +118,7 @@ var MessageField = function MessageField() {
       key: index
     }, message.author, ": ", message.text);
   });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ChatField, {
-    messages: messages
-  }), messageRender, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(MessageField, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, messageRender), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(MessageField, {
     onAddMessage: handleAddMessage
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     type: "text",
