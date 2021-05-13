@@ -1,24 +1,43 @@
-import React,{useState,useCallback} from 'react';
+import React,{useState,useRef,useEffect} from 'react';
 import AUTHORS from './../messages/authors';
+import { TextField } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+//import { FormControl } from '@material-ui/core';
+import Icon from '@material-ui/core/Icon';
 
 const MessageForm = (props)=>{
     const [value, setValue] = useState('');
+    const input =useRef();
     const handleChange = (e)=>{
         setValue(e.target.value);
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e.preventDefault());
         props.onAddMessage({ author:AUTHORS.HUMAN , text: value });
         setValue('');
     }
+    useEffect(()=>{
+        input.current.focus();
+    },[]);
 
     return (
       <div>
-          {/*<MessageField onAddMessage={ handleAddMessage }*/}
+
           <form onSubmit={handleSubmit}>
-              <input type='text' name='formtext' value={value}  onChange={handleChange}/>
-              <input type='submit' value='отправить'/>
+              <TextField
+                  onChange={handleChange}
+                  value={value}
+                  type='string'
+                  label='Your message...'
+                  inputRef={input}
+                  fullWidth={true}
+                  margin='dense'
+              />
+              <Button variant="contained"
+                  color="primary"
+                    size='small'
+                      onClick={handleSubmit}
+                  >Send</Button>
           </form>
       </div>
   )
