@@ -22,12 +22,19 @@ module.exports = {
                 test: /.(css|scss)$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
+            {
+                test:/\.(png|svg|jpg|jpeg|gif)$/i,
+                type:"asset/resourse",
+            }
         ],
     },
     devServer: {
         contentBase:path.join(__dirname,'public'),
         compress:true,
-        port:9000
+        port:9000,
+        historyApiFallback:{
+            index:'index.html'
+        }
     },
     plugins: [
         new HtmlWebpackPlugin({

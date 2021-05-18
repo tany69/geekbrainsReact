@@ -7,7 +7,7 @@ body{
 .chat{
     display: grid;
     grid-template-areas: " . header header ." ". nav content .";
-    grid-template-rows: 30% 75%;
+    grid-template-rows: 20% 75%;
     grid-template-columns: 20% 20% 40% 20%;
     grid-gap: 30px;
 

@@ -1,9 +1,17 @@
 import React from 'react';
+import {BrowserRouter,Switch,Route,Link} from 'react-router-dom';
 import './css/message.css';
 const Header = ()=> {
     return(
         <header className='header'>
-            <h1>Мессендер на React JS</h1>
+        <ul className="ul-menu">
+        <li>
+        <Link to ="/"> Home </Link>
+        </li>
+            <li>
+                <Link to ="/profile">Profile </Link>
+            </li>
+        </ul>
         </header>
     )
 }

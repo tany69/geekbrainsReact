@@ -7,15 +7,17 @@ import AUTHORS from "./authors";
 const Mess = (props)=> {
     const [messages, setMessages] = useState(props.initMess);
     const handleAddMessage = useCallback(newMessage => {
-        setMessages(prevMessages => [...prevMessages, newMessage]);
-    }, []);
+        setMessages(prevMessages => ({...prevMessages,[chatid]:[...prevMessages[chatid], newMessage]}));
+    }, [chatid]);
 
-
+    const params = useParams();
+    const { chatid } = params;
+    
     useEffect(() => {
         let timeout;
         if (!messages.length) { return }
 
-        const lastMsg = messages[messages.length - 1];
+        const lastMsg = messages[chatid][messages[chatid].length - 1];
         if (lastMsg.author === AUTHORS.HUMAN) {
             timeout =setTimeout(()=>{
                 handleAddMessage({ author: AUTHORS.BOT, text:`Как дела,${lastMsg.author}?`})
@@ -24,6 +26,9 @@ const Mess = (props)=> {
         return ()=> clearTimeout(timeout);
     }, [messages]);
 
+    if(!chatid || !messages[chatid]){
+        return <redirect to="/" />
+    }
     return(
         <div className="mess">
             <MessageField messages={messages}/>
