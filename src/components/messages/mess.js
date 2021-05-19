@@ -13,8 +13,8 @@ const Mess = (props)=> {
 
     const handleAddMessage = useCallback(
         newMessage => {
-            setMessages(prevMessages => 
-            ({...prevMessages,[chatid]:[...prevMessages, newMessage],})
+            setMessages((prevMessages) =>
+            ({...prevMessages,[chatid]:[...prevMessages[chatid], newMessage],})
             );
     }, [chatid]);
 
@@ -37,8 +37,7 @@ const Mess = (props)=> {
     }, [messages[chatid]]);
 
     if(!chatid || !messages[chatid]){
-         console.log(chatid);
-        //return <redirect to="/" />
+        return <redirect to="/" />
     }
     return(
         <div className="mess">

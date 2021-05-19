@@ -6,12 +6,15 @@ import Mess from './../messages/mess';
 
 
 
+
 const Profile = ()=>{
     return(
+        <div>
         <h1>This is profile page! </h1>
-
-    )
+    </div>
+)
 }
+
 export const Routes= ()=>{
 
  return(
