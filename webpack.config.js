@@ -33,8 +33,8 @@ module.exports = {
         compress:true,
         port:9000,
         historyApiFallback:{
-            index:'index.html'
-        }
+            publicPath:"/bundle.js"
+        },
     },
     plugins: [
         new HtmlWebpackPlugin({

@@ -1,21 +1,31 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState,usePrev} from 'react';
 import MessageField from './../messages/messageField';
 import MessageForm from './../messages/messageForm';
-
+//import {useParams,Route} from 'react-router-dom';
+//
 import './css/message.css';
 import AUTHORS from "./authors";
 const Mess = (props)=> {
     const [messages, setMessages] = useState(props.initMess);
-    const handleAddMessage = useCallback(newMessage => {
-        setMessages(prevMessages => ({...prevMessages,[chatid]:[...prevMessages[chatid], newMessage]}));
+    const {chatid} = props;
+    // console.log("chat-"+chatid);
+
+
+    const handleAddMessage = useCallback(
+        newMessage => {
+            setMessages(prevMessages => 
+            ({...prevMessages,[chatid]:[...prevMessages, newMessage],})
+            );
     }, [chatid]);
 
-    const params = useParams();
-    const { chatid } = params;
-    
+    // const params = useParams();
+    // const { chatid } = params;
+    console.log(chatid);
+    console.log(props.initMess);
+
     useEffect(() => {
         let timeout;
-        if (!messages.length) { return }
+        if (!messages[chatid].length) { return }
 
         const lastMsg = messages[chatid][messages[chatid].length - 1];
         if (lastMsg.author === AUTHORS.HUMAN) {
@@ -24,15 +34,16 @@ const Mess = (props)=> {
             },1500);
         }
         return ()=> clearTimeout(timeout);
-    }, [messages]);
+    }, [messages[chatid]]);
 
     if(!chatid || !messages[chatid]){
-        return <redirect to="/" />
+         console.log(chatid);
+        //return <redirect to="/" />
     }
     return(
         <div className="mess">
-            <MessageField messages={messages}/>
-            <MessageForm  onAddMessage={handleAddMessage }/>
+            <MessageField messages={messages[chatid]}/>
+             <MessageForm  onAddMessage={handleAddMessage }/>
         </div>
     )
 }

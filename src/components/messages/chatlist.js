@@ -28,14 +28,14 @@ const ChatList = ()=> {
     const classes = useStyles();
     const listitem =chats.map((item, index) => {
        return (
-           <Link to={`/chat/${item.chatid}`}>
+            <Link to={`/chat/${item.chatid}`}>
                <ListItem key={item.chatid} button>
                    <ListItemAvatar>
                        <Avatar  src={`./pics/${item.avatar}`}/>
                    </ListItemAvatar>
                    <ListItemText id={item.chatid} primary={` ${item.name} (${item.newMes}/${item.count})`} />
                </ListItem>
-           </Link>
+            </Link>
        )
     });
     return(
