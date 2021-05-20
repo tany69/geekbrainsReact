@@ -15,19 +15,31 @@ const App =()=>{
     //     // { author: AUTHORS.HUMAN, text: "Привет" }
     //     ,
     // ];
+    const params = useParams();
+    const {chatid} = params;
+    console.log(params);
+
     const initMess = {
         1:[{ author: AUTHORS.BOT, text: "Привет, человек!" },{ author: AUTHORS.HUMAN, text: "Привет!" },{ author: AUTHORS.BOT, text: "Как дела?"}],
         2:[{ author: AUTHORS.BOT, text: "Привет!" },{ author: AUTHORS.HUMAN, text: "Привет!" },{ author: AUTHORS.BOT, text: "Как дела?"}],
         3:[{ author: AUTHORS.BOT, text: "Привет!" },{ author: AUTHORS.BOT, text: "Как дела?"}]
     }
-    const params = useParams();
-    const {chatid} = params;
-    console.log(params);
+
+    const [messages, setMessages] = useState(initMess);
+
+    const handleAddMessage = useCallback(
+        newMessage => {
+        setMessages((prevMessages) =>
+    ({...prevMessages,[chatid]:[...prevMessages[chatid], newMessage],})
+);
+}, [chatid]);
+    
+
     return(
         <div className='chat'>
             <Header/>
             <ChatList />
-            <Mess initMess={initMess} chatid={chatid} />
+            <Mess initMess={messages[chatid]} newAddMessage={handleAddMessage} />
         </div>
     )
 };

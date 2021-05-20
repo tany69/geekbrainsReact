@@ -5,7 +5,7 @@ ul{
     border: solid 2px rgb(63, 81, 181);
     border-radius: 20px;
     grid-area: nav;
-    height: auto;
+    height:auto;
 
 }
 .header{

@@ -6,43 +6,27 @@ import MessageForm from './../messages/messageForm';
 import './css/message.css';
 import AUTHORS from "./authors";
 const Mess = (props)=> {
-    const [messages, setMessages] = useState(props.initMess);
-    const {chatid} = props;
-    // console.log("chat-"+chatid);
-
-
-    const handleAddMessage = useCallback(
-        newMessage => {
-            setMessages((prevMessages) =>
-            ({...prevMessages,[chatid]:[...prevMessages[chatid], newMessage],})
-            );
-    }, [chatid]);
-
-    // const params = useParams();
-    // const { chatid } = params;
-    console.log(chatid);
-    console.log(props.initMess);
-
+    
     useEffect(() => {
         let timeout;
-        if (!messages[chatid].length) { return }
+        if (!props.initMess.length) { return }
 
-        const lastMsg = messages[chatid][messages[chatid].length - 1];
+        const lastMsg = props.initMess[props.initMess.length - 1];
         if (lastMsg.author === AUTHORS.HUMAN) {
             timeout =setTimeout(()=>{
-                handleAddMessage({ author: AUTHORS.BOT, text:`Как дела,${lastMsg.author}?`})
+                props.newAddMessage({ author: AUTHORS.BOT, text:`Как дела,${lastMsg.author}?`})
             },1500);
         }
         return ()=> clearTimeout(timeout);
-    }, [messages[chatid]]);
+    }, [props.initMess]);
 
-    if(!chatid || !messages[chatid]){
+    if(!props.initMess){
         return <redirect to="/" />
     }
     return(
         <div className="mess">
-            <MessageField messages={messages[chatid]}/>
-             <MessageForm  onAddMessage={handleAddMessage }/>
+            <MessageField messages={props.initMess}/>
+             <MessageForm  onAddMessage={props.newAddMessage}/>
         </div>
     )
 }
