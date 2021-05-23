@@ -28,8 +28,7 @@ const ChatList = (props)=> {
         setValue(e.target.value);
     };
     const newChat = props.chats.length + 1;
-   console.log(props.chats);
-   console.log(props.onAddChat);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         props.onAddChat({ chatid:newChat , name: value });
@@ -53,7 +52,7 @@ const ChatList = (props)=> {
             <List  className={classes.root}>
             {listitem}
             </List>
-            <form onsubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <TextField
                 onChange={handleChange}
                 value={value}
