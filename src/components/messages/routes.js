@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter,Switch,Route} from 'react-router-dom';
 import App from './../app/app';
 import ChatList from './../messages/chatlist';
-import Mess from './../messages/mess';
+import Header from './../messages/header';
 
 
 
@@ -20,8 +20,8 @@ export const Routes= ()=>{
  return(
      <BrowserRouter>
         <Switch>
+            <Route path='/' exact component={App} />
             <Route path='/profile' exact component={Profile} />
-            <Route path='/' exact component={ChatList} />
             <Route path='/chat/:chatid' exact component={App} />
         </Switch>
      </BrowserRouter>

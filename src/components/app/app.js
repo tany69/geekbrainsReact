@@ -2,7 +2,7 @@ import React,{useState,useCallback,useEffect} from "react";
 import AUTHORS from './../messages/authors';
 import ChatList from './../messages/chatlist';
 import Header from './../messages/header';
- import Mess from './../messages/mess';
+import Mess from './../messages/mess';
 import {useParams} from 'react-router-dom';
 import './app.css';
 
@@ -13,7 +13,7 @@ const App =()=>{
    
     const params = useParams();
     const {chatid} = params;
-    console.log(params);
+
 
     const initMess = {
         1:[{ author: AUTHORS.BOT, text: "Привет, человек!" },{ author: AUTHORS.HUMAN, text: "Привет!" },{ author: AUTHORS.BOT, text: "Как дела?"}],
@@ -32,7 +32,7 @@ const App =()=>{
     ]
 
     const [messages, setMessages] = useState(initMess);
-    const [chat,setChat]  = useState(iniChats);
+    const [chat,setChat]  = useState(initChats);
 
 
     const handleAddMessage = useCallback(
@@ -44,15 +44,18 @@ const App =()=>{
     
     const handleAddChats = useCallback(
         newChat=>{
-            setChat((prevChat)=> [...prevChat,newChat])
-    },[]);
+            console.log(newChat);
+            setChat((prevChat)=> [...prevChat,newChat]);
+            setMessages(prev => ({ ...prev, [chat.length + 1]: [] }))
+    console.log(messages);
+     },[]);
     
-   console.log(chat);
+   console.log(chatid);
     return(
         <div className='chat'>
             <Header />
             <ChatList chats={chat} onAddChat={handleAddChats}/>
-            <Mess initMess={messages[chatid]} newAddMessage={handleAddMessage} />
+            <Mess initMess={messages} chatid={chatid} newAddMessage={handleAddMessage} />
         </div>
     )
 };
