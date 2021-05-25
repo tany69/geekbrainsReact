@@ -20,7 +20,7 @@ const Mess = ()=> {
 
     useEffect(() => {
         let timeout;
-    if (!initMess[chatid].length) { return }
+    if (!initMess[chatid]?.length) { return }
 
     const lastMsg = initMess[chatid][initMess[chatid]?.length - 1];
     if (lastMsg.author === AUTHORS.HUMAN) {

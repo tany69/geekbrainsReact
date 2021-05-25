@@ -32,8 +32,9 @@ export const messagesReducer = (state = initialState, action) => {
                 ...state,
                 messagesList: {
                     ...state.messagesList,
-                    [action.payload.chatid]: [],
+                    [action.newChat.chatid]: [],
                 }
+
             };
         }
         default:

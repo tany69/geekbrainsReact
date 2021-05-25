@@ -17,7 +17,7 @@ export const addMessageWithThunk = (newMessage, chatid) => (dispatch) => {
 
     if (newMessage.author !== AUTHORS.BOT) {
         timeout = setTimeout(() => {
-            dispatch(addMessage({ text: `Κΰκ δελΰ, ${newMessage.author}?`, author: AUTHORS.BOT }, chatid));
+            dispatch(addMessage({ text: `ΠΠ°ΠΊ Π΄ΠµΠ»Π°, ${newMessage.author}?`, author: AUTHORS.BOT }, chatid));
     }, 1000);
     }
 };

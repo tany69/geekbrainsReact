@@ -38,7 +38,8 @@ const ChatList = (props)=> {
     const newChat = chats.length + 1;
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(addChat({ chatid:newChat , name: value }));
+        dispatch(addChat({name: value , chatid:newChat }));
+        
         setValue('');
     }
 
