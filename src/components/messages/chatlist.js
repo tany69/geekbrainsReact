@@ -9,6 +9,10 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import { TextField } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
+import {useSelector, useDispatch} from 'react-redux';
+import {addChat} from '../../store/chat/actions';
+
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -21,21 +25,24 @@ const useStyles = makeStyles((theme) => ({
 
 
 const ChatList = (props)=> {
+
     const classes = useStyles();
     const [value, setValue] = useState('');
+    const chats = useSelector(state => state.chats.chats);
+    const dispatch = useDispatch();
+
 
     const handleChange = (e)=>{
         setValue(e.target.value);
     };
-    const newChat = props.chats.length + 1;
-
+    const newChat = chats.length + 1;
     const handleSubmit = (e) => {
         e.preventDefault();
-        props.onAddChat({ chatid:newChat , name: value });
+        dispatch(addChat({ chatid:newChat , name: value }));
         setValue('');
     }
 
-    const listitem =props.chats.map((item, index) => {
+    const listitem =chats.map((item, index) => {
        return (
             <Link to={`/chat/${item.chatid}`}>
                <ListItem key={item.chatid} button>
@@ -52,7 +59,7 @@ const ChatList = (props)=> {
             <List  className={classes.root}>
             {listitem}
             </List>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} >
                 <TextField
                 onChange={handleChange}
                 value={value}

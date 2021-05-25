@@ -1,19 +1,24 @@
-initState = {
-    chatList:[
-        {chatid:1,name:'Ìàðèíà'},
-        {chatid:2,name:'Íèêîëàé'},
-        {chatid:3,name:'Ôèíàì'},
-        {chatid:4,name:'Âÿ÷åñëàâ'},
-        {chatid:5,name:'Àíàñòàñèÿ'}
-    ],
+import {ADD_CHAT} from './actions';
+
+const initialState = {
+    chats:[
+        {chatid:1,name:'ÐœÐ°Ñ€Ð¸Ð½Ð°'},
+        {chatid:2,name:'ÐÐ¸ÐºÐ¾Ð»Ð°Ð¹'},
+        {chatid:3,name:'Ð¤Ð¸Ð½Ð°Ð¼'},
+        {chatid:4,name:'Ð’ÑÑ‡ÐµÑÐ»Ð°Ð²'},
+        {chatid:5,name:'ÐÐ½Ð°ÑÑ‚Ð°ÑÐ¸Ñ'}
+    ]
 };
-const chatReduser= (initState, action)=>{
+ export const chatReduser = (state= initialState, action)=>{
     switch(action.type){
-        case ADD_CHAT :{
-            return(
+        case ADD_CHAT: {
+            return{
                 ...state,
-                chatList:[...state.chatList,action.newChat],
-            )
+                chats: [...state.chats, action.newChat],
+            }
         }
-    }
+        default:
+            return state;
+    };
+
 }

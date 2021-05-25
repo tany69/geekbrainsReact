@@ -1,14 +1,14 @@
 import {createStore, combineReducers} from 'redux';
 import {profileReduser} from './profile/reduser';
 import {chatReduser} from './chat/reduser';
-
-const rootReduser= combineReducers({
-    profile:profileReduser,
-    chat:chatReducer
-})
+import { messagesReducer} from './message/reduser';
 
  export const store= createStore(
-     rootReduser,
-     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+     combineReducers({
+         chats:chatReduser,
+         message:messagesReducer,
+     }),
+         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
  );
 

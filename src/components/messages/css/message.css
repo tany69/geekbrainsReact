@@ -2,10 +2,14 @@ ul{
      list-style: none;
 }
 .nav{
-    border: solid 2px rgb(63, 81, 181);
-    border-radius: 20px;
+    border-left: solid 2px rgb(63, 81, 181);
+    border-right: solid 2px rgb(63, 81, 181);
+    border-top: solid 2px rgb(63, 81, 181);
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-topright: 20px;
     grid-area: nav;
     height:auto;
+    text-align: center;
 
 }
 .header{
