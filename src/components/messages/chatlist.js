@@ -7,30 +7,33 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
-import { TextField } from '@material-ui/core';
+import { TextField ,IconButton} from '@material-ui/core';
 import Button from '@material-ui/core/Button';
+import DeleteIcon from '@material-ui/icons/Delete';
 import {useSelector, useDispatch} from 'react-redux';
-import {addChat} from '../../store/chat/actions';
+import {addChat, deleteChat} from '../../store/chat/actions';
 
 
-
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles ({
     root: {
         width: '100%',
-        maxWidth: 360,
-        backgroundColor: theme.palette.background.paper,
+        maxWidth: '360',
+        backgroundColor:'#ffffff',
     },
-}));
+    newMess:{
+        backgroundColor:'#FFFC85',
+    }
+
+});
 
 
 const ChatList = (props)=> {
 
     const classes = useStyles();
     const [value, setValue] = useState('');
-    const chats = useSelector(state => state.chats.chats);
+    const chats         = useSelector(state => state.chats.chats);
+    const newMessChatId = useSelector(state => state.chats.newMessChatId);
     const dispatch = useDispatch();
-
 
     const handleChange = (e)=>{
         setValue(e.target.value);
@@ -39,18 +42,20 @@ const ChatList = (props)=> {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(addChat({name: value , chatid:newChat }));
-        
         setValue('');
     }
 
     const listitem =chats.map((item, index) => {
-       return (
+        return (
             <Link to={`/chat/${item.chatid}`}>
-               <ListItem key={item.chatid} button>
+               <ListItem key={item.chatid}  button className={ `${item.chatid === newMessChatId ? "classes.newMess" : ""}` } >
                    <ListItemAvatar>
                        <Avatar  src={`./pics/${item.avatar}`}/>
                    </ListItemAvatar>
                    <ListItemText id={item.chatid} primary={` ${item.name} `} />
+                        <IconButton aria-label="delete" onClick={ () => { dispatch(deleteChat(item.chatid)) } }>
+                        <DeleteIcon />
+                </IconButton>
                </ListItem>
             </Link>
        )

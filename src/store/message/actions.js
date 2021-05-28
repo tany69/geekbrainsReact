@@ -2,11 +2,11 @@ import  AUTHORS  from "./../../components/messages/authors";
 
 export const ADD_MESSAGE = "MESSAGES::ADD_MESSAGE";
 
-export const addMessage = (newMessage, id) => ({
+export const addMessage = (newMessage, chatid) => ({
     type: ADD_MESSAGE,
     payload: {
         message: newMessage,
-        chatid:id,
+        chatid:chatid,
     },
 });
 
@@ -18,6 +18,7 @@ export const addMessageWithThunk = (newMessage, chatid) => (dispatch) => {
     if (newMessage.author !== AUTHORS.BOT) {
         timeout = setTimeout(() => {
             dispatch(addMessage({ text: `Как дела, ${newMessage.author}?`, author: AUTHORS.BOT }, chatid));
-    }, 1000);
+    }, 3000);
+
     }
 };

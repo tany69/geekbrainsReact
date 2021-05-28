@@ -4,10 +4,17 @@ import ReactDOM from "react-dom";
 import {Routes} from './components/messages/routes';
 import {Provider} from 'react-redux';
 import {store} from './store';
+import { PersistGate } from 'redux-persist/integration/react'
+import {persistor} from './store'
 
 
 
 
 ReactDOM.render(
- <Provider store={store}><Routes /></Provider>, document.getElementById("app"));
+ <Provider store={store}>
+    <PersistGate persistor={persistor} loading={null}>
+       <Routes/>
+    </PersistGate>
+  </Provider>
+    , document.getElementById("app"));
 //ReactDOM.render(<Routes />, document.getElementById("app"));
