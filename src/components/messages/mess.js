@@ -2,32 +2,31 @@ import React, {useCallback, useEffect, useState,usePrev} from 'react';
 import MessageField from './../messages/messageField';
 import MessageForm from './../messages/messageForm';
 import {Redirect, useParams} from 'react-router-dom';
-//
 import './css/message.css';
-import AUTHORS from "./authors";
-const Mess = (props)=> {
-    console.log(props.chatid);
-    console.log(props.initMess[props.chatid].length);
-    useEffect(() => {
-        let timeout;
-        if (!props.initMess[props.chatid].length) { return }
+import {useSelector, useDispatch} from 'react-redux';
+import { addMessageWithThunk} from "./../../store/message/actions";
+import AUTHORS from './../messages/authors';
 
-        const lastMsg = props.initMess[props.chatid][props.initMess[props.chatid]?.length - 1];
-        if (lastMsg.author === AUTHORS.HUMAN) {
-            timeout =setTimeout(()=>{
-                props.newAddMessage({ author: AUTHORS.BOT, text:`Как дела,${lastMsg.author}?`})
-            },1500);
-        }
-        return ()=> clearTimeout(timeout);
-    }, [props.initMess[props.chatid]]);
 
-    if(!props.initMess[props.chatid]){
+
+const Mess = ()=> {
+    const dispatch = useDispatch();
+    const initMess = useSelector(state => state.message.messagesList);
+    const {chatid} = useParams();
+    const handleAddMessage = useCallback(
+        (newMessage) => {
+        dispatch(addMessageWithThunk(newMessage, chatid));
+    },[chatid, dispatch]);
+
+
+    
+    if(!initMess[chatid]){
         return <Redirect to="/" />
     }
     return(
         <div className="mess">
-            <MessageField messages={props.initMess} chatid = {props.chatid} />
-             <MessageForm  onAddMessage={props.newAddMessage}/>
+            <MessageField messages={initMess} chatid = {chatid} />
+             <MessageForm  onAddMessage={handleAddMessage}/>
         </div>
     )
 }
